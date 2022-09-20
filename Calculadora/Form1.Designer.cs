@@ -29,9 +29,14 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNum1 = new System.Windows.Forms.TextBox();
+            this.txtNum2 = new System.Windows.Forms.TextBox();
             this.lbl_ = new System.Windows.Forms.Label();
+            this.rd_btn_Basicas = new System.Windows.Forms.RadioButton();
+            this.rd_btn_Avanzada = new System.Windows.Forms.RadioButton();
+            this.listaAvanzada = new System.Windows.Forms.ListBox();
+            this.cmBoxBasica = new System.Windows.Forms.ComboBox();
+            this.btnCalcular = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -43,19 +48,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Numero 1:";
             // 
-            // textBox1
+            // txtNum1
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(83, 23);
-            this.textBox1.TabIndex = 1;
+            this.txtNum1.Location = new System.Drawing.Point(96, 78);
+            this.txtNum1.Name = "txtNum1";
+            this.txtNum1.Size = new System.Drawing.Size(83, 23);
+            this.txtNum1.TabIndex = 1;
             // 
-            // textBox2
+            // txtNum2
             // 
-            this.textBox2.Location = new System.Drawing.Point(96, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(83, 23);
-            this.textBox2.TabIndex = 3;
+            this.txtNum2.Location = new System.Drawing.Point(96, 118);
+            this.txtNum2.Name = "txtNum2";
+            this.txtNum2.Size = new System.Drawing.Size(83, 23);
+            this.txtNum2.TabIndex = 3;
             // 
             // lbl_
             // 
@@ -66,14 +71,71 @@
             this.lbl_.TabIndex = 2;
             this.lbl_.Text = "Numero 2:";
             // 
+            // rd_btn_Basicas
+            // 
+            this.rd_btn_Basicas.AutoSize = true;
+            this.rd_btn_Basicas.Location = new System.Drawing.Point(218, 37);
+            this.rd_btn_Basicas.Name = "rd_btn_Basicas";
+            this.rd_btn_Basicas.Size = new System.Drawing.Size(58, 19);
+            this.rd_btn_Basicas.TabIndex = 4;
+            this.rd_btn_Basicas.TabStop = true;
+            this.rd_btn_Basicas.Text = "Basica";
+            this.rd_btn_Basicas.UseVisualStyleBackColor = true;
+            this.rd_btn_Basicas.CheckedChanged += new System.EventHandler(this.rd_btn_Basicas_CheckedChanged);
+            // 
+            // rd_btn_Avanzada
+            // 
+            this.rd_btn_Avanzada.AutoSize = true;
+            this.rd_btn_Avanzada.Location = new System.Drawing.Point(355, 37);
+            this.rd_btn_Avanzada.Name = "rd_btn_Avanzada";
+            this.rd_btn_Avanzada.Size = new System.Drawing.Size(76, 19);
+            this.rd_btn_Avanzada.TabIndex = 5;
+            this.rd_btn_Avanzada.TabStop = true;
+            this.rd_btn_Avanzada.Text = "Avanzada";
+            this.rd_btn_Avanzada.UseVisualStyleBackColor = true;
+            this.rd_btn_Avanzada.CheckedChanged += new System.EventHandler(this.rd_btn_Avanzada_CheckedChanged);
+            // 
+            // listaAvanzada
+            // 
+            this.listaAvanzada.Enabled = false;
+            this.listaAvanzada.FormattingEnabled = true;
+            this.listaAvanzada.ItemHeight = 15;
+            this.listaAvanzada.Location = new System.Drawing.Point(334, 62);
+            this.listaAvanzada.Name = "listaAvanzada";
+            this.listaAvanzada.Size = new System.Drawing.Size(120, 94);
+            this.listaAvanzada.TabIndex = 6;
+            // 
+            // cmBoxBasica
+            // 
+            this.cmBoxBasica.Enabled = false;
+            this.cmBoxBasica.FormattingEnabled = true;
+            this.cmBoxBasica.Location = new System.Drawing.Point(194, 62);
+            this.cmBoxBasica.Name = "cmBoxBasica";
+            this.cmBoxBasica.Size = new System.Drawing.Size(121, 23);
+            this.cmBoxBasica.TabIndex = 7;
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Location = new System.Drawing.Point(183, 197);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.TabIndex = 8;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 270);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(490, 270);
+            this.Controls.Add(this.btnCalcular);
+            this.Controls.Add(this.cmBoxBasica);
+            this.Controls.Add(this.listaAvanzada);
+            this.Controls.Add(this.rd_btn_Avanzada);
+            this.Controls.Add(this.rd_btn_Basicas);
+            this.Controls.Add(this.txtNum2);
             this.Controls.Add(this.lbl_);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNum1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -85,8 +147,13 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtNum1;
+        private TextBox txtNum2;
         private Label lbl_;
+        private RadioButton rd_btn_Basicas;
+        private RadioButton rd_btn_Avanzada;
+        private ListBox listaAvanzada;
+        private ComboBox cmBoxBasica;
+        private Button btnCalcular;
     }
 }
