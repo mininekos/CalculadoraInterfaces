@@ -107,6 +107,7 @@
             // 
             // cmBoxBasica
             // 
+            this.cmBoxBasica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmBoxBasica.Enabled = false;
             this.cmBoxBasica.FormattingEnabled = true;
             this.cmBoxBasica.Location = new System.Drawing.Point(194, 62);
@@ -122,6 +123,7 @@
             this.btnCalcular.TabIndex = 8;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // Form1
             // 
